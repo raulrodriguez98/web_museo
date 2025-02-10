@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Juego 2</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="index.css" media="(width: 480px)">
+		<link rel="stylesheet" type="text/css" href="juegos.css">
+    </head>
+
+    <body>
+        <header>
+            <!--Nombre del museo-->
+            <h1>Museo del Videojuego</h1>
+
+            <!--Logo del museo-->
+            <img class="logo" src="imagenes/logo.png" alt="Logo del Museo" />
+
+            <!--Formulario de inicio de sesión y registro-->
+            <form action="procesar.php" method="post" class="formulario">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" /><br>
+                <label for="passw">Contrase&ntilde;a:</label>
+                <input type="password" id="passw" name="passw" value="" /><br>
+                <input type="submit" id="button1" value="Iniciar sesi&oacute;n" />
+                <!--Enlace de registro-->
+                <button id="button2"><a href="altausuarios.html">Registro</a></button>
+
+            </form>
+
+            
+            <!--Menú de enlaces de interés del museo-->
+            <nav id="normal">
+                <ul>
+                    <li><a href="index.html">&Iacute;ndice</a></li>
+                    <li><a href="coleccion.html">Colecci&oacute;n</a></li>
+                    <li><a href="visita.html">Visita</a></li>
+                    <li><a href="exposiciones.html">Exposiciones</a></li>
+                    <li><a href="informacion.html">Informaci&oacute;n</a></li>
+                    <li><a href="experiencias.html">Expericiencias</a></li>
+                </ul>
+            </nav> 
+
+            <!--Menú de enlaces de interés del museo para móvil-->
+            <nav id="movil">
+                <button class="dropbtn">Menú</button>
+                <section class="dropdown-content">
+                    <a href="index.html">&Iacute;ndice</a>
+                    <a href="coleccion.html">Colecci&oacute;n</a>
+                    <a href="visita.html">Visita</a>
+                    <a href="exposiciones.html">Exposiciones</a>
+                    <a href="informacion.html">Informaci&oacute;n</a>
+                    <a href="experiencias.html">Expericiencias</a>
+                </section>
+            </nav>
+        </header>
+        
+        <main>
+            <section id="imagen">
+                <img class=juego src="imagenes/d2.jpg" alt="Imagen representativa">
+            </section>
+            
+            <section id="ficha">
+                <p>Diablo II</p>
+                <p>David Brevik</p>
+                <p>29 de junio de 2000</p>
+                <p>Juego de fantasía medieval oscura donde te enfrentaras a un sinfin de enemigos variados
+                    con múltiples clases y un combate frenético. Se trata de un <abbr title="Action Rol Playing Game">ARPG</abbr>
+                    con la capacidad de brindar miles de horas en un mundo rico de detalles y un sistema de
+                    inventario perfecto.
+                </p>
+                <p>Un jugador/Multijugador - 
+                    PEGI +18 - 
+                    PC
+                </p>
+            </section>
+
+            <section id="similares">
+                <h3>Juegos similares:</h3>
+                <ul>
+                    <li><a href="obra1.html"><img class="similar" src="imagenes/ds.jpg" alt="Imagen representativa"></a><p>Juego 1</p></li>
+                    <li><a href="obra3.html"><img class="similar" src="imagenes/mgs.jpg" alt="Imagen representativa"></a><p>Juego 3</p></li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <a href="contacto.html">Datos del Desarrollador</a><br>
+            <a href="como_se_hizo.pdf">Como se hizo</a>
+        </footer>
+    </body>
+</html>

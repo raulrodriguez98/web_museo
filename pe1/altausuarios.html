@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Alta de usuarios a la Web</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="index.css" media="(width: 480px)">
+		<link rel="stylesheet" type="text/css" href="altausuarios.css">
+    </head>
+
+    <body>
+        <header>
+            <!--Nombre del museo-->
+            <h1>Museo del Videojuego</h1>
+
+            <!--Logo del museo-->
+            <img class="logo" src="imagenes/logo.png" alt="Logo del Museo" />
+
+            <!--Formulario de inicio de sesión y registro-->
+            <form action="procesar.php" method="post" class="formulario">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" /><br>
+                <label for="passw">Contrase&ntilde;a:</label>
+                <input type="password" id="passw" name="passw" value="" /><br>
+                <input type="submit" id="button1" value="Iniciar sesi&oacute;n" />
+                <!--Enlace de registro-->
+                <button id="button2"><a href="altausuarios.html">Registro</a></button>
+
+            </form>
+            
+            <!--Menú de enlaces de interés del museo-->
+            <nav id="normal">
+                <ul>
+                    <li><a href="index.html">&Iacute;ndice</a></li>
+                    <li><a href="coleccion.html">Colecci&oacute;n</a></li>
+                    <li><a href="visita.html">Visita</a></li>
+                    <li><a href="exposiciones.html">Exposiciones</a></li>
+                    <li><a href="informacion.html">Informaci&oacute;n</a></li>
+                    <li><a href="experiencias.html">Expericiencias</a></li>
+                </ul>
+            </nav> 
+
+            <!--Menú de enlaces de interés del museo para móvil-->
+            <nav id="movil">
+                <button class="dropbtn">Menú</button>
+                <section class="dropdown-content">
+                    <a href="index.html">&Iacute;ndice</a>
+                    <a href="coleccion.html">Colecci&oacute;n</a>
+                    <a href="visita.html">Visita</a>
+                    <a href="exposiciones.html">Exposiciones</a>
+                    <a href="informacion.html">Informaci&oacute;n</a>
+                    <a href="experiencias.html">Expericiencias</a>
+                </section>
+            </nav> 
+        </header>
+
+        <main>
+            <form action="procesar.php" method="post" class="registro">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required/><br>
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos" required/><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required/><br>
+                <label for="password">Contrase&ntilde;a:</label>
+                <input type="password" id="password" name="password" required/><br>
+                <label for="fecha_nac" id="fcha_nac">Fecha de nacimiento:</label>
+                <input type="date" id="fecha_nac" name="fecha_nac" min="1894-01-01" max="2020-01-01" required/><br>
+                <label for="tipo_doc" id="tipo_doc">Tipo de documento:</label>
+                <select id="tipo_doc_selec">
+                    <option value="DNI">DNI</option>
+                    <option value="Pasaporte">Pasaporte</option>
+                    <option value="NIE">NIE</option>
+                </select><br>
+                <label for="num_doc" id="num_docu">Número de documento:</label>
+                <input type="text" id="num_doc" name="num_doc" required/><br>
+                <label for="cod_postal" id="codi_postal">Código postal:</label>
+                <input type="text" id="cod_postal" name="cod_postal" required/><br>
+                <input type="checkbox" id="check_term_conds" required>
+                <label for="check_term_conds" id="ch_t_c">He leído y acepto las
+                    <a href="condiciones_legales.html">condiciones legales</a> y la
+                    <a href="politica_privacidad.html">Política de Privacidad</a>
+                </label><br>
+                <!--<input type="submit" id="envio" value="Enviar" />-->
+                <button type=submit id="envio"><a href="exito_registro.html">Enviar</a></button>
+                <input type = "reset" id ="reset" value = "Reiniciar formulario" /> 
+            </form>
+        </main>
+
+        <footer>
+            <a href="contacto.html">Datos del Desarrollador</a><br>
+            <a href="como_se_hizo.pdf">Como se hizo</a>
+        </footer>
+    </body>
+</html>
