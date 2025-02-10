@@ -1,0 +1,16 @@
+main section{
+    background-color: rgb(65, 166, 183, 0.7);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: fit-content;
+    padding: 10px;
+    margin: 0;
+    border: 1px solid black;
+    margin-top: 20px;
+    margin-left: 20px;   
+}
+
+main section h3{
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid black;
+}

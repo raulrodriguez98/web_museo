@@ -1,0 +1,113 @@
+main > h2{
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+    background-color: rgb(65, 166, 183, 0.7);
+    width: 530px;
+    border: 1px solid black;
+    border-radius: 1em;
+}
+
+main > #comentarios {
+    display: grid;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+}
+
+main > #comentarios #comentario{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(65, 166, 183, 0.7);
+    margin-top: 20px;
+    border: rgb(0, 0, 0, 0.7) 1px solid;
+    border-radius: 1em;
+    padding: 10px;
+    width: 500px;
+    text-align: center;
+    align-items: center;
+}
+
+main > #comentarios #comentario #com{
+    background-color: white;
+    border: black 1px solid;
+    width: 80%;
+    margin: 0 auto;
+}
+
+main > form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 100px;
+}
+
+main > form #text{
+    margin-top: 10px;
+    width: 300px;
+    height: 100px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    opacity: 0.8;
+    resize: none;
+}
+
+main > form #button2{
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+main #error{
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 300px;
+    border: rgb(0, 0, 0, 0.7) 1px solid;
+    border-radius: 1em;
+    padding: 10px;
+    background-color: rgb(65, 166, 183);
+    text-align: center;
+}
+
+main #error a{
+    color: lightgray;
+    text-decoration: none;
+}
+
+main #error a:visited{
+    color: lightgray;
+    text-decoration: none;
+}
+
+main #error a:hover{
+    color: rgb(218, 173, 92);
+}
+
+main > form #envio,
+main > form #reset{                 /*Botones de submit y reset*/
+    margin-top: 20px;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 1em;
+}
+
+main > form #envio a{
+    color: inherit;
+}
+
+main > form #envio a:visited{       /*Enlace del botón de submit*/
+    text-decoration: none;
+    color: inherit;
+}
+
+main > form #envio:hover{          /*Botones de submit cuando pasas el ratón por encima*/
+    color: red;
+    background-color: #daad5c;
+}
+
+main > form #envio a:hover{
+    color: red;
+}

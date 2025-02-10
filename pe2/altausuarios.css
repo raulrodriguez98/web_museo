@@ -1,0 +1,116 @@
+main{                               /*Main del index*/
+    text-align: center;
+}
+
+main > form{                        /*Formulario de registro*/
+    border: 1px solid black;
+    border-radius: 1em;
+    text-align: center;
+    display: inline-block;
+    padding: 20px;
+    width: 400px;
+    background-color: rgb(65, 166, 183, 0.7);
+    margin-top: 7%;
+}
+
+main > form label{                  /*Etiquetas del formulario*/
+    display: inline-block;
+    width: 80px;
+    margin-bottom: 5px;
+    margin-right: 3px;
+    text-align: justify;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+main > form #fcha_nac{              /*Anchura label fecha de nacimiento*/
+    width: 155px;
+}
+
+main > form #tipo_doc{              /*Anchura label tipo de documento*/
+    width: 170px;
+}
+
+main > form #num_docu{              /*Anchura label número de documento*/
+    width: 170px;
+}
+
+main > form #num_doc{               /*Anchura text box tipo de documento*/
+    width: 85px;
+}
+
+main > form #codi_postal{           /*Anchura label código postal*/
+    width: 170px;
+}
+
+main > form #cod_postal{            /*Anchuro text box código postal*/
+    width: 85px;
+}
+
+main > form #ch_t_c{                /*Anchura texto(label) del checkbox de términos y condiciones*/
+    width: 185px;
+}
+
+main > form input[type="text"],     /*Cajas de texto del formulario, select del tipo de documento y check de terms. y conds.*/
+main > form input[type="email"],
+main > form input[type="password"],
+main > form input[type="date"],
+main > form #tipo_doc_selec,
+main > form #check_term_conds{
+    box-sizing: border-box;
+    border: 1px solid #999;
+    text-align: left;
+    vertical-align: top;
+    opacity: 0.84;
+}
+
+main > form input[type="text"]:hover,     /*Cajas de texto del formulario, select del tipo de documento y check de terms. y conds. cuando pasas el ratón por encima*/
+main > form input[type="email"]:hover,
+main > form input[type="password"]:hover,
+main > form input[type="date"]:hover,
+main > form #tipo_doc_selec:hover,
+main > form #check_term_conds:hover{ 
+    opacity: 1;
+}
+
+main > form #ch_t_c{                /*Texto de términos y condiciones*/
+    margin-top: 10px;
+}
+
+main > form #check_term_conds{      /*Checkbox de términos y condiciones*/
+    margin-top: 13px;
+}
+
+main > form #ch_t_c a{              /*Color de los enlaces de términos y condiciones*/
+    color: lightgray;
+}
+
+main > form #ch_t_c a:hover{        /*Color de los enlaces de términos y condiciones cuando les pasas el ratón por encima*/
+    color: gray;
+}
+
+main > form #envio,
+main > form #reset{                 /*Botones de submit y reset*/
+    margin-top: 20px;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 1em;
+}
+
+main > form #envio a{
+    color: inherit;
+}
+
+main > form #envio a:visited{       /*Enlace del botón de submit*/
+    text-decoration: none;
+    color: inherit;
+}
+
+main > form #envio:hover,
+main > form #reset:hover{           /*Botones de submit y reset cuando pasas el ratón por encima*/
+    color: red;
+    background-color: #daad5c;
+}
+
+main > form #envio a:hover{
+    color: red;
+}
