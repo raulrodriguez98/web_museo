@@ -1,0 +1,229 @@
+<?php
+include 'header.php'; // Incluir el archivo del header
+include 'footer.php'; // Incluir el archivo del footer
+session_start();
+?>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Información del museo</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="index.css" media="(width: 480px)">
+		<link rel="stylesheet" type="text/css" href="informacion.css">
+    </head>
+
+    <body>
+        <header>
+            <?php generarHeader(); ?>
+
+            <!--Formulario de inicio de sesión y registro-->
+            <form id="login-form" action="identificar.php" method="post" class="formulario">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" /><br>
+                <label for="passw">Contrase&ntilde;a:</label>
+                <input type="password" id="passw" name="passw" value="" /><br>
+                <input type="submit" id="button1" value="Iniciar sesi&oacute;n" />
+                <!--Enlace de registro-->
+                <button id="button2"><a href="altausuarios.php">Registro</a></button>
+
+            </form>
+
+            <!--Section con el nombre y tipo de usuario identificado-->
+            <section id="usuario-info" style="display:none" class="formulario">
+                <?php if (isset($_SESSION['usuario_id'])): ?>
+                    <h3>Bienvenido, <?php echo $_SESSION['usuario_nombre']; ?></h3>
+                    <p id="tipo-usuario"> 
+                    <?php if ($_SESSION['usuario_tipo'] === 'admin'): ?>
+                        (Administrador) 
+                    <?php else: ?>
+                        (Usuario)
+                    <?php endif; ?>
+                    </p>
+                    <button id="button2"><a href="cerrar_sesion.php">Cerrar sesión</a></button>
+                <?php endif; ?>
+            </section>           
+        </header>
+
+        <main>
+            <!--Section con información sobre apertura y precio de entradas-->
+            <section id="info">
+            <!--Cuadro informativo de las horas de apertura-->
+                <ul id="horas_apertura">
+                    <li id="l_j">Lunes a Jueves: Abierto de 9:30 a 21:30</li>
+                    <li id="v_s">Viernes y Sábado: Abierto de 9:30 a 14:30</li>
+                    <li id="d_f">Domingo y Festivos: Cerrado</li>
+                </ul>
+
+            <!--Precios de entrada-->
+                <ul id="precios">
+                    <li>Entrada general: 15€</li>
+                    <li>Entrada general + "Guía del Museo del Videojuego": 25€</li>
+                    <li>Entrada visita guiada: 35€</li>
+                    <li>Entrada visita guiada + "Guía del Museo del Videojuego": 42€</li>
+                </ul>
+            </section>
+
+            <!--Nombre de los meses para el calendario-->
+            <ul id="nombre_meses">
+                <li>Mayo</li>
+                <li>Junio</li>
+                <li>Julio</li>
+            </ul>
+
+            <!--Calendario con la disponibilidad del museo, siendo:
+                - abierto de lunes-Jueves
+                - parcial Viernes y Sábados
+                - cerrado Domingos y Festivos
+                - primer_dia_<nombre_mes> El primer día en el calendario de cada mes
+            -->
+            <section id="calendarios">            
+                <ol id="mayo">
+                    <li class="dia">Lunes</li>
+                    <li class="dia">Martes</li>
+                    <li class="dia">Miércoles</li>
+                    <li class="dia">Jueves</li>
+                    <li class="dia">Viernes</li>
+                    <li class="dia">Sábado</li>
+                    <li class="dia">Domingo</li>
+                    <li id="primer_dia_mayo"><abbr title="Día del Trabajador">1</abbr></li>
+                    <li id="abierto">2</li>
+                    <li id="parcial">3</li>
+                    <li id="parcial">4</li>
+                    <li id="cerrado">5</li>
+                    <li id="abierto">6</li>
+                    <li id="abierto">7</li>
+                    <li id="abierto">8</li>
+                    <li id="abierto">9</li>
+                    <li id="parcial">10</li>
+                    <li id="parcial">11</li>
+                    <li id="cerrado">12</li>
+                    <li id="abierto">13</li>
+                    <li id="abierto">14</li>
+                    <li id="abierto">15</li>
+                    <li id="abierto">16</li>
+                    <li id="parcial">17</li>
+                    <li id="parcial">18</li>
+                    <li id="cerrado">19</li>
+                    <li id="abierto">20</li>
+                    <li id="abierto">21</li>
+                    <li id="abierto">22</li>
+                    <li id="abierto">23</li>
+                    <li id="parcial">24</li>
+                    <li id="parcial">25</li>
+                    <li id="cerrado">26</li>
+                    <li id="abierto">27</li>
+                    <li id="abierto">28</li>
+                    <li id="abierto">29</li>
+                    <li id="abierto">30</li>
+                    <li id="parcial">31</li>
+                </ol>
+
+                <ol id="junio">
+                    <li class="dia">Lunes</li>
+                    <li class="dia">Martes</li>
+                    <li class="dia">Miércoles</li>
+                    <li class="dia">Jueves</li>
+                    <li class="dia">Viernes</li>
+                    <li class="dia">Sábado</li>
+                    <li class="dia">Domingo</li>
+                    <li id="primer_dia_junio">1</li>
+                    <li id="cerrado">2</li>
+                    <li id="abierto">3</li>
+                    <li id="abierto">4</li>
+                    <li id="abierto">5</li>
+                    <li id="abierto">6</li>
+                    <li id="parcial">7</li>
+                    <li id="parcial">8</li>
+                    <li id="cerrado">9</li>
+                    <li id="abierto">10</li>
+                    <li id="abierto">11</li>
+                    <li id="abierto">12</li>
+                    <li id="abierto">13</li>
+                    <li id="parcial">14</li>
+                    <li id="parcial">15</li>
+                    <li id="cerrado">16</li>
+                    <li id="abierto">17</li>
+                    <li id="abierto">18</li>
+                    <li id="abierto">19</li>
+                    <li id="abierto">20</li>
+                    <li id="parcial">21</li>
+                    <li id="parcial">22</li>
+                    <li id="cerrado">23</li>
+                    <li id="abierto">24</li>
+                    <li id="abierto">25</li>
+                    <li id="abierto">26</li>
+                    <li id="abierto">27</li>
+                    <li id="parcial">28</li>
+                    <li id="parcial">29</li>
+                    <li id="cerrado">30</li>
+                </ol>
+
+                <ol id="julio">
+                    <li class="dia">Lunes</li>
+                    <li class="dia">Martes</li>
+                    <li class="dia">Miércoles</li>
+                    <li class="dia">Jueves</li>
+                    <li class="dia">Viernes</li>
+                    <li class="dia">Sábado</li>
+                    <li class="dia">Domingo</li>
+                    <li id="primer_dia_julio">1</li>
+                    <li id="abierto">2</li>
+                    <li id="abierto">3</li>
+                    <li id="abierto">4</li>
+                    <li id="parcial">5</li>
+                    <li id="parcial">6</li>
+                    <li id="cerrado">7</li>
+                    <li id="abierto">8</li>
+                    <li id="abierto">9</li>
+                    <li id="abierto">10</li>
+                    <li id="abierto">11</li>
+                    <li id="parcial">12</li>
+                    <li id="parcial">13</li>
+                    <li id="cerrado">14</li>
+                    <li id="abierto">15</li>
+                    <li id="abierto">16</li>
+                    <li id="abierto">17</li>
+                    <li id="abierto">18</li>
+                    <li id="parcial">19</li>
+                    <li id="parcial">20</li>
+                    <li id="cerrado">21</li>
+                    <li id="abierto">22</li>
+                    <li id="abierto">23</li>
+                    <li id="abierto">24</li>
+                    <li id="abierto">25</li>
+                    <li id="parcial">26</li>
+                    <li id="parcial">27</li>
+                    <li id="cerrado">28</li>
+                    <li id="abierto">29</li>
+                    <li id="abierto">30</li>
+                    <li id="abierto">31</li>
+                </ol>  
+            </section>
+        
+            <!--Información adicional del museo:
+                section del bloque:
+                    - section con el texto:
+                        - adress
+                        - p para telefono
+                    - enlace con imagen
+            -->
+            <section id="ubicacion_mapa">
+                <section id="direccion">
+                    <address>C/ Periodista Daniel Saucedo Aranda, s/n, 18071, Granada</address>
+                    <p id="telefono">Nº de contacto: 123456789</p>
+                </section>
+
+                <a href="https://www.google.es/maps/place/C.+Periodista+Daniel+Saucedo+Aranda,+Chana,+18014+Granada/@37.1969144,-3.6255911,19z/data=!4m6!3m5!1s0xd71fc54f0f7fea1:0x5463cb956f4f4595!8m2!3d37.1968728!4d-3.6249474!16s%2Fg%2F11xf48xwh?entry=ttu">
+                    <img class="ubicacion" src="imagenes/ubicacion.jpg" alt="Imagen con ubicacion del museo">
+                </a>
+            </section>
+        </main>
+
+        <?php generarFooter(); ?>
+
+        <script src="script.js"></script>
+    </body>
+</html>

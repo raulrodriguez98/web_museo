@@ -1,0 +1,196 @@
+/*Primer section "info" que contiene dos listas no ordenadas (<lu>)*/
+/*Estilo para el section*/
+main > #info{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-top: 5%;
+}
+
+/*Estilo para la lista de las horas de apertura*/
+main > #info #horas_apertura{
+    list-style-type: none;
+    border: solid 1px black;
+    background-color: rgb(65, 166, 183, 0.7);
+    border-radius: 1em;
+    width: 400px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 60px;
+    margin-left: 20%;
+}
+
+/*Estilo para cada línea de la lista*/
+main > #info #horas_apertura li{
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/*Colores para cada tipo/línea*/
+main > #info #horas_apertura #l_j{
+    color: rgb(144, 238, 144);
+}
+
+main > #info #horas_apertura #v_s{
+    color: rgb(255, 255, 0);
+}
+
+main > #info #horas_apertura #d_f{
+    color: lightcoral;
+}
+
+/*Estilo para la lista de precios*/
+main > #info #precios{
+    list-style-type: none;
+    border: solid 1px black;
+    background-color: rgb(65, 166, 183, 0.7);
+    border-radius: 1em;
+    width: 450px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 0;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-left: 15%;
+    height: fit-content;    
+}
+
+/*Estilo de las líneas de la lista*/
+main > #info #precios li{
+    text-align: left;
+    margin-left: 10px;
+}
+/*Fin primer section "info"*/
+
+/*Estilo para otra lista con los nombres de los meses para el calendario*/
+main > #nombre_meses{
+    display: flex;
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/*Estilo para cada línea de la lista*/
+main > #nombre_meses li{
+    width: 33%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2em;
+}
+
+/*Segundo section que contiene tres listas ordenadas (<ol>)*/
+/*Estilo del section*/
+main > section{
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+main > #calendarios{
+    margin-bottom: 20%;
+}
+
+/*Estilo de las listas*/
+main > section ol{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 0;
+    border: solid 1.5px rgb(0, 0, 0, 0.3);
+    width: 33%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/*Estilo de la clase "día", que son los nombres de cada día*/
+.dia{
+    background-color: rgb(65, 166, 183, 0.7);
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/*Estilo de cada "casilla" o línea de la lista del calendario*/
+main > section > ol li{
+    border-width: 20%;
+    text-align: right;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: solid 1.5px rgb(0, 0, 0, 0.3);
+}
+
+/*Estilo del primer día de los tres meses (para decir cuando empieza el mes)*/
+main > section #mayo #primer_dia_mayo{
+    grid-column-start: 3;
+    background-color: rgb(255, 0, 0, 0.7);
+}
+
+main > section #junio #primer_dia_junio{
+    grid-column-start: 6;
+    background-color: rgb(255, 255, 0, 0.7);
+}
+
+main > section #julio #primer_dia_julio{
+    background-color: rgb(144, 238, 144, 0.7);
+}
+
+/*Color de fondo de cada "casilla"*/
+main > section ol #abierto{
+    background-color: rgb(144, 238, 144, 0.7);
+}
+
+main > section ol #parcial{
+    background-color: rgb(255, 255, 0, 0.7);
+}
+
+main > section ol #cerrado{
+    background-color: rgb(255, 0, 0, 0.7);
+}
+
+/*Estilo tercer section "ubicacion_mapa" que contiene un section y una enlace con imagen*/
+/*Estilo del section*/
+main > #ubicacion_mapa{
+    display: flex;
+    /*margin-bottom: 72px;*/
+    align-items: center;
+    background-color: rgb(65, 166, 183, 0.7);
+    margin-left: 0;
+    padding: 10px;
+    position: fixed;
+    bottom: 72px;
+    width: 100%;
+    margin-top: 5%;
+}
+
+/*Estilo cuarto section "direccion" que contiene un adress y un p "telefono"*/
+/*Estilo del section*/
+main > #ubicacion_mapa > #direccion{
+    margin-left: 25%;
+    text-align: left;
+}
+
+/*Estilo del adress y el p*/
+main > #ubicacion_mapa > #direccion address,
+main > #ubicacion_mapa > #direccion p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    height: fit-content;
+    display: block;
+}
+/*Fin section "direccion"*/
+
+/*Estilo del enlace*/
+main > #ubicacion_mapa a{
+    margin-left: 50px;
+    height: 220px;
+    border: solid rgb(218, 173, 92, 0.8) 2px;
+}
+
+/*Estilo de la imagen del enlace*/
+main > #ubicacion_mapa a img{
+    width: 400px;
+    height: 220px;
+    
+}
+/*Fin section "ubicacion_mapa*/

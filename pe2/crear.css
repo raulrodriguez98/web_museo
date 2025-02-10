@@ -1,0 +1,113 @@
+body{               /*Body del index*/
+    background-image: url(imagenes/fondo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header{                 /*Estilo del header*/
+    background: transparent;
+    border-bottom: white 2px solid;
+    align-items: start;
+    text-align: center;
+    display: grid;
+    height: 10%;
+    padding-top: 50px;
+}
+
+header h1{
+    margin-top: 0px;
+}
+
+#button2{               /*Botón de registro*/
+    margin-top: 10px;
+    width: 150px;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 1em;
+    margin: 0 auto;
+}
+
+#button2:hover{         /*Botón de registro al pasar el ratón por encima*/
+    color: red;
+    background-color: #daad5c;
+}
+
+#button2 > a{
+    text-align: center;
+    color: inherit;
+}
+
+#button2 > a:visited{   /*Enlace del boton de registro*/
+    text-decoration: none;
+    color:inherit;
+}
+
+main form{
+    margin: 0 auto;
+    margin-top: 5%;
+    display: block;
+    text-align: center;
+    background-color: #41a6b7;
+    width:fit-content;
+    border: black 2px solid;
+    border-radius: 1em;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+main h3{
+    margin-top: 40px;
+}
+
+main > ul{
+    list-style: none;
+    padding: 0;
+}
+
+main ul li{
+    margin-bottom: 10px;
+}
+
+main > ul li a:link, main > ul li a:visited{
+    text-decoration: none;
+    color: inherit;
+}
+
+main > ul li a:hover{
+    color: red;
+}
+
+main input[type="number"] {
+    width: 100px;
+    text-align: center;
+    display: block;
+    margin: 0 auto; /* Centra horizontalmente */
+}
+
+main section{
+    margin: 0 auto;
+    text-align: center;
+    background-color: #41a6b7;
+    width:fit-content;
+    border: black 2px solid;
+    border-radius: 1em;
+    padding: 20px;
+    padding-bottom: 10px;
+}
+
+main section article{
+    background-color: rgb(218, 173, 92);
+    padding: 5px;
+    border: black 2px solid;
+    margin-bottom: 10px;
+}
+
+a:link {text-decoration: none;} /*Estilo de los links que aparezcan*/
+a:visited {text-decoration: none;}
