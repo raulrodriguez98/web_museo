@@ -1,0 +1,91 @@
+main > #exp_sug {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+main > #exp_sug #experiencias,
+main > #exp_sug #sugerencias {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(65, 166, 183, 0.7);
+    margin-top: 20px;
+    border: rgb(0, 0, 0, 0.7) 1px solid;
+    border-radius: 1em;
+    padding: 10px;
+    width: 600px;
+}
+
+main > #sugerencias{
+    margin-right: 10%;
+}
+
+main > h2 {
+    color: black;
+}
+
+main > #exp_sug ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+main > #exp_sug li {
+    margin-bottom: 10px;
+    background-color: rgb(255, 255, 255, 0.8);
+    border: black solid 1px;
+    border-radius: 1em;
+    margin-top: 10px;
+    height: 100px;
+    padding: 5px;
+}
+
+main > #form{
+    margin: 0 auto;
+    padding: 0;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(65, 166, 183, 0.7);
+    border: solid 1px rgb(0, 0, 0, 0.7);
+    border-radius: 1em;
+    padding-bottom: 37px;
+    margin-bottom: 85px;
+}
+
+main > #form form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main > #form #mensaje{
+    margin-top: 10px;
+    width: 300px;
+    height: 100px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    opacity: 0.8;
+}
+
+main > #form #mensaje:hover,
+main > #form #mensaje:focus{
+    opacity: 1;
+}
+
+main > #form #botones #envio,
+main > #form #botones #reset{
+    width: fit-content;
+    margin-top: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+main > #form #botones #envio:hover,
+main > #form #botones #reset:hover{
+    color: red;
+    background-color: #daad5c;
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Colección Kojima</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="index.css" media="(width: 480px)">
+		<link rel="stylesheet" type="text/css" href="coleccion.css">
+    </head>
+
+    <body>
+        <header>
+            <!--Nombre del museo-->
+            <h1>Museo del Videojuego</h1>
+
+            <!--Logo del museo-->
+            <img class="logo" src="imagenes/logo.png" alt="Logo del Museo" />
+
+           <!--Formulario de inicio de sesión y registro-->
+           <form action="procesar.php" method="post" class="formulario">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" /><br>
+                <label for="passw">Contrase&ntilde;a:</label>
+                <input type="password" id="passw" name="passw" value="" /><br>
+                <input type="submit" id="button1" value="Iniciar sesi&oacute;n" />
+                <!--Enlace de registro-->
+                <button id="button2"><a href="altausuarios.html">Registro</a></button>
+            </form>
+
+
+            <!--Menú de enlaces de interés del museo-->
+            <nav id="normal">
+                <ul>
+                    <li><a href="index.html">&Iacute;ndice</a></li>
+                    <li><a href="coleccion.html">Colecci&oacute;n</a></li>
+                    <li><a href="visita.html">Visita</a></li>
+                    <li><a href="exposiciones.html">Exposiciones</a></li>
+                    <li><a href="informacion.html">Informaci&oacute;n</a></li>
+                    <li><a href="experiencias.html">Expericiencias</a></li>
+                </ul>
+            </nav> 
+
+            <!--Menú de enlaces de interés del museo para móvil-->
+            <nav id="movil">
+                <button class="dropbtn">Menú</button>
+                <section class="dropdown-content">
+                    <a href="index.html">&Iacute;ndice</a>
+                    <a href="coleccion.html">Colecci&oacute;n</a>
+                    <a href="visita.html">Visita</a>
+                    <a href="exposiciones.html">Exposiciones</a>
+                    <a href="informacion.html">Informaci&oacute;n</a>
+                    <a href="experiencias.html">Expericiencias</a>
+                </section>
+            </nav> 
+        </header>
+
+        <main>
+            <!--Menú para búsqueda avanzada por autor o tema o epocas-->
+            <nav id="menu">
+                <h3>Búsqueda de obras por:</h3>
+
+                <ul>
+                    <li id="autores">Autores
+                        <ul style="--cantidad-items: 3">
+                            <li><a href="coleccion_kojima.html">Hideo Kojima</a></li>
+                            <li><a href="coleccion_miyazaki.html">Hidetaka Miyazaki</a></li>
+                            <li><a href="coleccion_gabe.html">Gabe Newell</a></li>
+                        </ul>
+                    </li>  
+
+                    <li id="temas">Temas
+                        <ul style="--cantidad-items: 4">
+                            <li><a href="coleccion_cienciaficcion.html">Ciencia Ficción</a></li>
+                            <li><a href="coleccion_medieval.html">Medieval</a></li>
+                            <li><a href="coleccion_retro.html">Retro</a></li>
+                            <li><a href="coleccion_guerra.html">Guerra</a></li>
+                        </ul>
+                    </li>
+
+                    <li id="epocas">Épocas
+                        <ul style="--cantidad-items: 4">
+                            <li><a href="coleccion_70_90.html">De los 70 a los 90</a></li>
+                            <li><a href="coleccion_90_00.html">De los 90 al 2000</a></li>
+                            <li><a href="coleccion_00_10.html">De los 2000 a 2010</a></li>
+                            <li><a href="coleccion_10_act.html">De 2010 a la actualidad</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <!--Tabla de las obras-->
+            <section id="tabla">
+                <table>
+                    <tbody>
+                        <!--Fila 1-->
+                        <tr>
+                            <td><a href="obra3.html"><img class="juego" src="imagenes/mgs.jpg" alt="Imagen representativa"></a>
+                                <p>Metal Gear Solid</p>
+                                <p>Hideo Kojima</p>
+                                <p>3 de septiembre de 1998</p>
+                            </td>
+
+                            <td><a href="obra3.html"><img class="juego" src="imagenes/mgs.jpg" alt="Imagen representativa"></a>
+                                <p>Metal Gear Solid 2: Sons of Liberty</p>
+                                <p>Hideo Kojima</p>
+                                <p>13 de noviembre de 2001</p>
+                            </td>
+
+                            <td><a href="obra3.html"><img class="juego" src="imagenes/mgs.jpg" alt="Imagen representativa"></a>
+                                <p>Metal Gear Solid 3: Snake Eater</p>
+                                <p>Hideo Kojima</p>
+                                <p>17 de noviembre de 2004</p>
+                            </td>   
+                        </tr>
+
+                        <!--Fila 2-->
+                        <tr>
+                            <td><a href="obra3.html"><img class="juego" src="imagenes/mgs.jpg" alt="Imagen representativa"></a>
+                                <p>Metal Gear Solid V: The Phantom Pain</p>
+                                <p>Hideo Kojima</p>
+                                <p>1 de septiembre de 2015</p>
+                            </td>
+
+                            <td><a href="obra3.html"><img class="juego" src="imagenes/mgs.jpg" alt="Imagen representativa"></a>
+                                <p>Metal Gear</p>
+                                <p>Hideo Kojima</p>
+                                <p>13 de julio de 1987</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+
+        <footer>
+            <a href="contacto.html">Datos del Desarrollador</a><br>
+            <a href="como_se_hizo.pdf">Como se hizo</a>
+        </footer>
+    </body>
+</html>

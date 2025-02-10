@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Museo del Videojuego</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="index.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="index.css" media="(width: 480px)">
+    </head>
+
+    <body>
+        <!--Cabecera-->
+        <header>
+            <!--Nombre del museo-->
+            <h1>Museo del Videojuego</h1>
+
+            <!--Logo del museo-->
+            <img class="logo" src="imagenes/logo.png" alt="Logo del Museo" />
+
+            <!--Formulario de inicio de sesión y registro-->
+            <form action="procesar.php" method="post" class="formulario">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" /><br>
+                <label for="passw">Contrase&ntilde;a:</label>
+                <input type="password" id="passw" name="passw" value="" /><br>
+                <input type="submit" id="button1" value="Iniciar sesi&oacute;n" />
+                <!--Enlace de registro-->
+                <button id="button2"><a href="altausuarios.html">Registro</a></button>
+
+            </form>
+
+            <!--Enlace de registro
+            <button id="button2"><a href="altausuarios.html">Registro</a></button>
+            -->
+
+            <!--Menú de enlaces de interés del museo-->
+            <nav id="normal">
+                <ul>
+                    <li><a href="index.html">&Iacute;ndice</a></li>
+                    <li><a href="coleccion.html">Colecci&oacute;n</a></li>
+                    <li><a href="visita.html">Visita</a></li>
+                    <li><a href="exposiciones.html">Exposiciones</a></li>
+                    <li><a href="informacion.html">Informaci&oacute;n</a></li>
+                    <li><a href="experiencias.html">Expericiencias</a></li>
+                </ul>
+            </nav> 
+
+            <!--Menú de enlaces de interés del museo para móvil-->
+            <nav id="movil">
+                <button class="dropbtn">Menú</button>
+                <section class="dropdown-content">
+                    <a href="index.html">&Iacute;ndice</a>
+                    <a href="coleccion.html">Colecci&oacute;n</a>
+                    <a href="visita.html">Visita</a>
+                    <a href="exposiciones.html">Exposiciones</a>
+                    <a href="informacion.html">Informaci&oacute;n</a>
+                    <a href="experiencias.html">Expericiencias</a>
+                </section>
+            </nav> 
+        </header>
+
+        <main>
+            <section id="introduccion">
+                <!--Título del main-->
+                <h2>Museo del Videojuego</h2>
+
+                <!--Descripción del museo en el main-->
+                <p>Desde los 70 hasta la actualidad, los videojuegos han sido muy populares en la sociedad juvenil, y poco a poco incluso a todas las edades, 
+                    además de ir ganando protagonismo hasta llegar a convertirse en la industria más importante del sector del ocio.<br>Este museo recoge varios hitos y obras publicadas en el sector durante toda esta época.<br><br>
+                   En este portal virtual podrá ver horarios, todo el contenido disponible del museo y la información necesaria para su visita en el menú en la parte superior.<br> 
+                </p>
+            </section>
+        </main>
+
+        <footer>
+            <a href="contacto.html">Datos del Desarrollador</a><br>
+            <a href="como_se_hizo.pdf">Como se hizo</a>
+        </footer>
+    </body>
+</html>
